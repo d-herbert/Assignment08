@@ -13,13 +13,22 @@ console.log(movies[0])
 movies.splice(2, 0, 'Moonstruck')
 console.log(movies.length)
 //STEP 4
-
+movies = movieArray
+delete movies[0]
+console.log(movies)
 //STEP 5
-
+movies = ['Clueless', 'Office Space', 'A Star Is Born', 'Spirited Away', 'Bridesmaids', 'Moonstruck', 'Saved']
+for (let movie in movies) {
+    console.log(movies[movie])
+}
 //STEP 6
-
+for (let movie of movies) {
+    console.log(movie)
+}
 //STEP 7
-
+for (let movie of movies.sort()) {
+    console.log(movie)
+}
 //STEP 8
 
 //STEP 9
