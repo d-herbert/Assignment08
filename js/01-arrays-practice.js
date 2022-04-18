@@ -50,7 +50,6 @@ console.log(moviesAll.reverse()[0])
 moviesAll = movies.concat(leastFavMovies)
 console.log(moviesAll[0])
 //STEP 12
-console.log('new ----------')
 let m1 = moviesAll.indexOf('Little Man')
 let m2 = moviesAll.indexOf('Gotti')
 let m3 = moviesAll.indexOf('The Boss Baby')
@@ -59,11 +58,45 @@ moviesAll[m2] = 'Best in Show'
 moviesAll[m3] = 'Elf'
 console.log(moviesAll)
 //STEP 13
-
+movies = [["Spirited Away", 1], ["Office Space", 2], ["Bridesmaids", 3], ["Clueless", 4], ["A Star Is Born", 5]]
+function titlesOnly(movie) {
+    for (i in movie) {
+        if (typeof movie[i] === 'string') {
+            console.log(movie[i])
+        }
+    }
+}
+movies.filter(titlesOnly)
 //STEP 14
-
+employees = ['Zak', 'Jessica', 'Mark', 'Fred', 'Sally']
+showEmployee = (empArray) => {
+    console.log('Employees: \n\n')
+    for (i in empArray) {
+        console.log(empArray[i].toUpperCase() + '\n')
+    }
+}
+showEmployee(employees)
 //STEP 15
-
+function filterValues(testArray) {
+    let newArray = []
+    for (i in testArray) {
+        if ((testArray[i] != 0) & (testArray[i] != null) & (testArray[i] != false)) {
+            newArray.push(testArray[i])
+        }
+    }
+    return newArray
+}
+console.log(filterValues([58, '', 'abcd', true, null, false, 0]))
 //STEP 16
-
+function randomizeArray(testArray) {
+    len = testArray.length
+    ranNum = Math.floor(Math.random() * len)
+    return testArray[ranNum]
+}
+console.log(randomizeArray(['2', '4', '7', '1', '0', '8', '22', '44', '90', '30']))
 //STEP 17
+function findMax(testArray) {
+    largestNum = Math.max.apply(null, testArray)
+    return largestNum
+}
+console.log(findMax([3, 10, 100, 6, 1001]))
